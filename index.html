@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vishnu Prasath | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <style>
+    ::-webkit-scrollbar { display: none; }
+    html { scroll-behavior: smooth; }
+    .gradient-text {
+      background: linear-gradient(to right, #ec4899, #6366f1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans transition duration-300">
+
+<!-- Navbar -->
+<header class="sticky top-0 bg-white shadow-md z-50">
+  <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+    <h1 class="text-2xl font-bold gradient-text flex items-center gap-2">
+      <i data-feather="user"></i> Vishnu
+    </h1>
+    <nav class="hidden md:flex space-x-8 font-medium text-gray-700">
+      <a href="#about" class="hover:text-indigo-900">About</a>
+      <a href="#projects" class="hover:text-indigo-900">Projects</a>
+      <a href="#resume" class="hover:text-indigo-900">Resume</a>
+      <a href="#achievements" class="hover:text-indigo-900">Achievements</a>
+      <a href="#contact" class="hover:text-indigo-900">Contact</a>
+    </nav>
+    <button id="themeToggle" class="ml-4 md:ml-8 p-2 border rounded-full hover:bg-gray-200 transition" aria-label="Toggle theme">
+      <i data-feather="moon"></i>
+    </button>
+  </div>
+</header>
+
+<!-- About -->
+<section id="about" class="px-6 py-5 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12" x-data="{ showMore: false }">
+  <div class="flex-1 text-center md:text-left" data-aos="fade-right">
+    <p class="text-pink-600 font-semibold">Hi, I'm</p>
+    <h2 class="text-5xl font-extrabold mb-4 gradient-text">Vishnu Prasath</h2>
+    <p class="text-lg text-gray-600 mb-6">
+      I am a Computer Science and Engineering graduate with a strong foundation in front-end development. Skilled in creating user-friendly interfaces and passionate about leveraging data to drive meaningful insights. Continuously expanding my knowledge in React JS, C# development, and data analysis, and eager to contribute to team success through both my existing and growing skill set.
+    </p>
+
+    <div class="flex flex-wrap justify-center md:justify-start gap-4">
+      <a href="/VISHNU PRASATH A resume.pdf" class="bg-pink-600 hover:bg-pink-700 text-white px-6 py-3 rounded-full font-semibold shadow-md transition">
+        Download Resume
+      </a>
+
+      <button @click="showMore = !showMore" class="bg-gray-200 hover:bg-gray-300 text-pink-600 px-6 py-3 rounded-full font-semibold shadow-md transition">
+        View More
+      </button>
+    </div>
+
+    <!-- This appears ONLY when the button is clicked -->
+    <div x-show="showMore" x-transition class="mt-5 text-sm text-gray-700 space-y-1">
+      <p><strong>Email:</strong> vishnuprasathappanasamy@gmail.com</p>
+      <p><strong>LinkedIn:</strong> 
+        <a href="https://www.linkedin.com/in/vishnu-prasath-a-vishnu/" target="_blank" class="text-blue-600 underline">
+          linkedin.com/in/vishnuprasath
+        </a>
+      </p>
+      <p><strong>Phone:</strong> +91 93445 98906</p>
+    </div>
+  </div>
+
+  <div class="flex-1" data-aos="fade-left">
+    <img src="./Vishnu2.jpg" alt="Profile Image" class="rounded-l shadow-xl hover:scale-105 transition-transform duration-500" height="400px">
+  </div>
+</section>
+
+
+<!-- Projects -->
+<section id="projects" class="bg-white py-20 px-6" data-aos="fade-up">
+  <div class="text-center mb-12">
+    <h2 class="text-4xl font-bold text-indigo-900">Projects</h2>
+    <p class="text-gray-600">Some of the work I've done</p>
+  </div>
+
+  <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+    
+    <!-- Project 1 -->
+    <div class="bg-white rounded-lg shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1" data-aos="zoom-in">
+      <div class="h-56 overflow-hidden rounded-t-lg">
+        <img src="./gamification-creative-collage-concept.jpg" alt="LMS Website" class="w-full h-full object-cover">
+      </div>
+      <div class="p-5">
+        <h3 class="font-bold text-xl">LMS Website</h3>
+        <p class="text-gray-600 text-sm mb-3">Learning management platform built using HTML, CSS, JS, Bootstrap.</p>
+        <div class="flex gap-3">
+          <a href="./LMS 1.zip" class="bg-pink-600 hover:bg-pink-700 text-white text-sm px-4 py-2 rounded-md shadow">Download</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="bg-white rounded-lg shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1" data-aos="zoom-in">
+      <div class="h-56 overflow-hidden rounded-t-lg">
+        <img src="./Screenshot 2025-06-29 191900.png" alt="Portfolio Website" class="w-full h-full object-cover">
+      </div>
+      <div class="p-5">
+        <h3 class="font-bold text-xl">Portfolio Website</h3>
+        <p class="text-gray-600 text-sm mb-3">Responsive portfolio using Tailwind CSS and animations.</p>
+        <div class="flex gap-3">
+          <a href="./Portfolio.zip" class="bg-pink-600 hover:bg-pink-700 text-white text-sm px-4 py-2 rounded-md shadow">Download</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="bg-white rounded-lg shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1" data-aos="zoom-in">
+      <div class="h-56 overflow-hidden rounded-t-lg">
+        <img src="./aws_logo_smile_1200x630-e1509685712443-12.webp" alt="AWS Deployment" class="w-full h-full object-cover">
+      </div>
+      <div class="p-5">
+        <h3 class="font-bold text-xl">AWS Deployment</h3>
+        <p class="text-gray-600 text-sm mb-3">Interactive e-learning platform hosted using AWS S3, CloudFront, Route 53.</p>
+        <div class="flex gap-3">
+          <a href="./Deploying an Intercative E-learnig website on AWS.zip" class="bg-pink-600 hover:bg-pink-700 text-white text-sm px-4 py-2 rounded-md shadow">Download</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- Resume -->
+<section id="resume" class="bg-gradient-to-b from-gray-100 to-white py-20 px-6" data-aos="fade-up">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-4xl font-bold text-center text-indigo-900 mb-12">Resume</h2>
+    <div class="grid md:grid-cols-2 gap-10">
+      <!-- Education -->
+      <div>
+        <h3 class="text-2xl font-semibold text-pink-600 mb-4">Education</h3>
+        <ul class="space-y-6">
+          <li class="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition">
+            <h4 class="text-lg font-bold text-indigo-800">B.E. Computer Science and Engineering</h4>
+            <p class="text-gray-600 text-sm">Government College of Engineering, Dharmapuri (2021–2025)</p>
+          </li>
+          <li class="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition">
+            <h4 class="text-lg font-bold text-indigo-800">Diploma in CSE</h4>
+            <p class="text-gray-600 text-sm">RVS Polytechnic College, Coimbatore (2018–2021)</p>
+          </li>
+          <li class="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition">
+            <h4 class="text-lg font-bold text-indigo-800">SSLC</h4>
+            <p class="text-gray-600 text-sm">Prasanna Matric School, Tuticorin (2017–2018)</p>
+          </li>
+        </ul>
+      </div>
+      <!-- Experience -->
+      <div>
+        <h3 class="text-2xl font-semibold text-pink-600 mb-4">Experience</h3>
+        <ul class="space-y-6">
+          <li class="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition">
+            <h4 class="text-lg font-bold text-indigo-800">Frontend Developer Intern</h4>
+            <p class="text-gray-600 text-sm">Smartcliff (2024)</p>
+            <p class="text-sm">Worked on UI development using HTML, CSS, JavaScript. Focused on bug fixes & UX improvements.</p>
+          </li>
+          <li class="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition">
+            <h4 class="text-lg font-bold text-indigo-800">Academic Project</h4>
+            <p class="text-gray-600 text-sm">E-learning Website on AWS (2025)</p>
+            <p class="text-sm">Designed & deployed site using AWS S3, Route 53, CloudFront, IAM policies.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Achievements -->
+<section id="achievements" class="bg-white py-20 px-6" data-aos="fade-up">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-4xl font-bold text-indigo-900 mb-10">Achievements</h2>
+    <div class="grid md:grid-cols-2 gap-8 text-left">
+      <div class="bg-gray-100 p-6 rounded-lg shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-bold text-pink-600 mb-2">Leadership</h3>
+        <p class="text-gray-600 text-sm">Placement Representative for the Computer Science and Engineering Department.</p>
+      </div>
+      <div class="bg-gray-100 p-6 rounded-lg shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-bold text-pink-600 mb-2">Academic Performance</h3>
+        <p class="text-gray-600 text-sm">Maintained CGPA of 7.5 in BE and 90% in Diploma.</p>
+      </div>
+      <div class="bg-gray-100 p-6 rounded-lg shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-bold text-pink-600 mb-2">Internship Excellence</h3>
+        <p class="text-gray-600 text-sm">Recognized for proactive development contributions during Smartcliff internship.</p>
+      </div>
+      <div class="bg-gray-100 p-6 rounded-lg shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-bold text-pink-600 mb-2">Volunteering</h3>
+        <p class="text-gray-600 text-sm">Organized community events and raised awareness on social issues.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="bg-gray-100 px-6 py-20" data-aos="zoom-in">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-4xl font-bold text-center text-indigo-900 mb-12">Contact Me</h2>
+
+    <!-- Thank You Message Hidden Initially -->
+    <div id="thankYouMessage" style="display: none;" class="bg-green-100 border border-green-400 text-green-800 px-6 py-4 rounded mb-6 text-center">
+      Thank you! Your message has been sent successfully.
+    </div>
+
+    <!-- Contact Form -->
+    <form id="contactForm" action="https://formsubmit.co/vishnuprasathappanasamy@gmail.com" method="POST" class="grid md:grid-cols-2 gap-6">
+      <input type="hidden" name="_next" value="https://avishnu-prasath-portfolio-a8uz.vercel.app/?submitted=true#contact">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="#contact">
+      <input type="text" name="name" placeholder="Your Name" required class="p-4 border border-gray-300 rounded-md focus:ring-2 focus:ring-pink-400">
+      <input type="email" name="email" placeholder="Your Email" required class="p-4 border border-gray-300 rounded-md focus:ring-2 focus:ring-pink-400">
+      <textarea name="message" placeholder="Your Message" rows="5" required class="p-4 border border-gray-300 rounded-md focus:ring-2 focus:ring-pink-400 md:col-span-2"></textarea>
+      <button type="submit" class="bg-pink-600 hover:bg-pink-700 text-white py-3 px-6 rounded-md font-semibold md:col-span-2 w-full">
+        Send Message
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-white text-center text-gray-500 py-6 border-t mt-12">
+  <p>&copy; 2025 Vishnu Prasath. All rights reserved.</p>
+</footer>
+
+<!-- Scripts -->
+<script>
+  AOS.init({ duration: 1200, once: true, easing: 'ease-in-out', offset: 120 });
+  feather.replace();
+
+  // Theme toggle
+  const toggle = document.getElementById('themeToggle');
+  const body = document.body;
+  toggle.addEventListener('click', () => {
+    body.classList.toggle('bg-gray-900');
+    body.classList.toggle('text-white');
+    toggle.innerHTML = body.classList.contains('bg-gray-900')
+      ? feather.icons['sun'].toSvg()
+      : feather.icons['moon'].toSvg();
+  });
+
+  // Show thank you message only after real form submission
+  window.addEventListener("load", function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('submitted') === 'true') {
+      const thankYou = document.getElementById("thankYouMessage");
+      if (thankYou) {
+        thankYou.style.display = "block";
+        window.scrollTo({
+          top: document.getElementById("contact").offsetTop - 80,
+          behavior: "smooth"
+        });
+      }
+    }
+  });
+</script>
+
+</body>
+</html>
