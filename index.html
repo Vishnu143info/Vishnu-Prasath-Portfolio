@@ -9,7 +9,7 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/feather-icons"></script>
   <style>
     ::-webkit-scrollbar { display: none; }
@@ -18,6 +18,12 @@
       background: linear-gradient(to right, #ec4899, #6366f1);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+      display: block;
     }
   </style>
 </head>
@@ -282,12 +288,12 @@
   <p>&copy; 2025 Vishnu Prasath. All rights reserved.</p>
 </footer>
 
+
 <!-- Scripts -->
 <script>
   AOS.init({ duration: 1200, once: true, easing: 'ease-in-out', offset: 120 });
   feather.replace();
 
-  // Theme toggle
   const toggle = document.getElementById('themeToggle');
   const body = document.body;
   toggle.addEventListener('click', () => {
@@ -298,7 +304,6 @@
       : feather.icons['moon'].toSvg();
   });
 
-  // Show thank you message only after real form submission
   window.addEventListener("load", function () {
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.get('submitted') === 'true') {
